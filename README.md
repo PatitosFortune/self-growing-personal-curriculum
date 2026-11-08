@@ -139,7 +139,7 @@ It checks links, relative paths, lesson numbering and IDs, Previous/Next navigat
 
 **Does it need an API key or a specific AI provider?** No. The site never calls an AI. You use whichever assistant you like to edit the repository.
 
-**Is my learning profile public?** Yes, if your repository is public, like every other file in it. Also, the included Pages workflow publishes the whole repository root, so `curriculum/LEARNING_PROFILE.md`, `curriculum/CANDIDATES.md` and `AGENTS.md` are served at their URLs even though no page links to them. Keep sensitive details out of those files, or do not publish. See [Before you publish](docs/publishing.md#before-you-publish-read-this).
+**Are my learning profile, interests and progress public?** Yes, if your repository is public, like every other file in it. Separately, the included Pages workflow publishes the whole repository root, so your profile (`curriculum/LEARNING_PROFILE.md`), curriculum decisions (`curriculum/CANDIDATES.md`) and progress data (`curriculum/PROGRESS.json`) are served at their URLs even though no page links to them, and **a private repository does not necessarily mean a private Pages site**. Keep sensitive details out of those files, or do not publish. See [Before you publish](docs/publishing.md#before-you-publish-read-this).
 
 **Will my email address be public?** If you push to a public repository, the email in your Git configuration is part of every commit. Use your GitHub `users.noreply.github.com` address and turn on GitHub's email privacy settings first. See [SECURITY.md](SECURITY.md).
 

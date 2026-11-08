@@ -17,8 +17,8 @@ Out of scope: vulnerabilities in GitHub Pages, GitHub Actions, your browser, or 
 
 Please do not open a public issue for a vulnerability.
 
-1. Preferred: use **Security → Report a vulnerability** on the repository page (GitHub private vulnerability reporting).
-2. If that option is not available, contact the maintainers through the contact address on the [Patitos Fortune organization profile](https://github.com/PatitosFortune).
+1. **Preferred:** open the repository's **Security** tab and choose **Report a vulnerability**. This is GitHub private vulnerability reporting; it is enabled for this repository (checked 2026-11-08), and only you and the maintainers can see the report.
+2. **Fallback:** if that option is missing or fails, email **patitosfortune@proton.me** (the contact address on the [Patitos Fortune organization profile](https://github.com/PatitosFortune)) with the subject "SECURITY: self-growing-personal-curriculum". Give the details but no exploit code that could cause harm if the message is read by others. Never post a vulnerability in a public issue or discussion.
 
 Include what you found, how to reproduce it, and the affected file or page. This is a small, volunteer-maintained project: expect an acknowledgement within about a week and a fix or a clear decision after that, but there is no service-level guarantee and there is no bug bounty.
 
@@ -28,7 +28,8 @@ Only the current `main` branch is maintained. There are no versioned releases ye
 
 ## If you build a site from this template
 
-- **Everything in the repository root is published** when you use the included Pages workflow, including `curriculum/LEARNING_PROFILE.md`, `curriculum/CANDIDATES.md`, `curriculum/PROGRESS.json` and `AGENTS.md`. They are not linked from the site, but anyone who guesses the URL can read them. Keep sensitive details out of those files, or do not publish. See [docs/publishing.md](docs/publishing.md).
+- **Everything in the repository root is published** when you use the included Pages workflow. That includes your learning profile (`curriculum/LEARNING_PROFILE.md`: interests, goals, background), your curriculum decisions (`curriculum/CANDIDATES.md`: what you were offered, accepted and rejected), your progress data (`curriculum/PROGRESS.json`) and `AGENTS.md`. They are not linked from the site, but anyone who guesses the URL can read them, and search engines may index them. Keep sensitive details out of those files, or do not publish. See [docs/publishing.md](docs/publishing.md).
+- **A private repository does not necessarily mean a private site.** A GitHub Pages site can be public even when its repository is private, depending on your GitHub plan and settings. Check who can open the published URL before you add anything personal.
 - **Git history is public too.** The author email on your commits is visible to everyone. Turn on **Keep my email addresses private** and **Block command line pushes that expose my email** in your GitHub email settings before your first commit, or set a `users.noreply.github.com` address in your Git configuration.
 - **Do not put secrets in the repository**, including API keys and tokens for the assistant you use. The template does not need any.
 - **Review what your AI assistant changes** before merging, especially workflow files, scripts and links.
