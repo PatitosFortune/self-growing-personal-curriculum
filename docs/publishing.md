@@ -2,6 +2,18 @@
 
 The site is plain static files at the repository root, so there is nothing to build. Any static host works. These steps cover GitHub Pages.
 
+## Before you publish: read this
+
+Publishing makes files public. Check these first.
+
+1. **The workflow publishes the whole repository root,** not just the pages you can see in the menu. On the template's own published site, `curriculum/LEARNING_PROFILE.md`, `curriculum/PROGRESS.json` and `AGENTS.md` return their contents when requested by URL (checked 2026-11-08). Your candidates file is in the same situation. Nothing links to them, but that is not protection.
+2. **Read your learning profile as a stranger would** before the first publish. Remove anything you would not put on a public page.
+3. **Your commit email is public** if the repository is public. In GitHub **Settings → Emails**, tick **Keep my email addresses private** and **Block command line pushes that expose my email**, and set Git to use your `users.noreply.github.com` address (`git config user.email`). Do this before your first commit; changing history afterwards is difficult.
+4. **No secrets in the repository.** The template needs no API keys.
+5. **A private repository does not make a Pages site private** unless your plan supports access control. See "Private repositories" below.
+
+If any of this is a problem, keep the repository private and read the site locally (see "Previewing locally").
+
 ## Option A (recommended): the included workflow
 
 `.github/workflows/pages.yml` runs `tools/validate_site.py` on every push and pull request. On pushes to `main` it then publishes the site. A broken link or a lesson-ID mistake therefore stops the deploy instead of going live.

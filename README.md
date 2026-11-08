@@ -14,6 +14,14 @@ A template for a **personal learning library that you grow with an AI coding ass
 
 It includes a two-lesson example course so you can see the format before you start. It ships with the Patitos Fortune look (duck logo, warm palette), and you can keep it or rebrand in one command. See [Customizing](#customizing).
 
+## What this is, and what it is not
+
+**It is** a template and a set of written rules. The "growing" is done by whichever AI coding assistant you point at the repository, following [`AGENTS.md`](AGENTS.md) and the workflows in [`prompts/`](prompts/). The repository itself contributes the structure: a fixed lesson format, an editorial gate for new ideas, a validator, and reading-progress tracking.
+
+**It is not** an autonomous learning engine, a hosted service or an adaptive tutor. The site never calls an AI model, makes no personalised recommendations, and does not grade you. It does not check that a lesson is correct; the assistant cites sources and you review the result. The quality of what grows depends on the assistant you use and on you.
+
+**Check before you publish:** the included Pages workflow publishes the whole repository root, including your learning profile. See [Before you publish](docs/publishing.md#before-you-publish-read-this).
+
 ## Get started in 5 minutes
 
 **1. Make your own copy.** Click **Use this template** (or **Fork**) on GitHub, or clone it:
@@ -131,9 +139,15 @@ It checks links, relative paths, lesson numbering and IDs, Previous/Next navigat
 
 **Does it need an API key or a specific AI provider?** No. The site never calls an AI. You use whichever assistant you like to edit the repository.
 
-**Is my learning profile public?** If your repository is public, yes, like every other file in it. Keep sensitive details out of it, or use a private repository (see [docs/publishing.md](docs/publishing.md) for how Pages behaves with private repositories).
+**Is my learning profile public?** Yes, if your repository is public, like every other file in it. Also, the included Pages workflow publishes the whole repository root, so `curriculum/LEARNING_PROFILE.md`, `curriculum/CANDIDATES.md` and `AGENTS.md` are served at their URLs even though no page links to them. Keep sensitive details out of those files, or do not publish. See [Before you publish](docs/publishing.md#before-you-publish-read-this).
+
+**Will my email address be public?** If you push to a public repository, the email in your Git configuration is part of every commit. Use your GitHub `users.noreply.github.com` address and turn on GitHub's email privacy settings first. See [SECURITY.md](SECURITY.md).
 
 **Can I use it without GitHub?** Yes. It's a folder of static files. Open `index.html` locally or upload it to any static host.
+
+## Security and contributing
+
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md). Contribution scope and process are in [CONTRIBUTING.md](CONTRIBUTING.md). A proposal for a more convincing demonstration is in [docs/demo-proposal.md](docs/demo-proposal.md).
 
 ## License
 
